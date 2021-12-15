@@ -1,0 +1,22 @@
+header{
+    padding : 40px 0;
+}
+
+h1{
+    @include title-style(70px);
+}
+
+
+.search{
+    display: flex;
+    justify-content: center;
+    &__label{
+        font-weight: 700;
+        font-size: 25px;
+        margin-right: 20px;
+    }
+    &__input{
+        width:40%;
+        padding: 10px;
+    }
+}

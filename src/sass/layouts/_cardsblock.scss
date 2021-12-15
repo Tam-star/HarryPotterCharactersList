@@ -1,0 +1,24 @@
+
+h2{
+    @include title-style(50px);
+}
+
+.card{
+    background-color: white;
+    border : 3px solid black;
+    width : 280px;
+    margin : 25px;
+    padding : 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bold-text{
+    font-weight: bold;
+}
+
+.cards-block{
+    display: flex;
+    flex-wrap: wrap;
+}

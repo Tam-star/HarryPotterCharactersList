@@ -1,0 +1,5 @@
+@mixin title-style ($size){
+    font-family: 'HarryPotter';
+    font-size: $size;
+    text-align: center;    
+}
