@@ -16,7 +16,7 @@ export default function Main({ character, house }) {
 
     return (
         <main>
-            <h2>Results for {character} {house!== '' ?  ` in ${house}` : ''}</h2>
+            <h2>{character!=='' ? `Results for ${character}` : ''} {house!== '' ?  ` in ${house}` : ''}</h2>
             <article className='cards-block'>
                 {house !== '' ? getStudentsFilteredByHouse(results, house).map(studentData => (
                     <Card key={studentData.name} name={studentData.name} house={studentData.house} gender={studentData.gender} dob={studentData.dateOfBirth} imgSrc={studentData.image} />
