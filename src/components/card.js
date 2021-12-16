@@ -7,9 +7,9 @@ export default function Card({name, house, gender, dob, imgSrc}) {
         <article className='card'> 
             <img src={imgSrc!=='' ? imgSrc : unknownImg} className='card__img' alt={alternativeText} ></img>
             <h3><span className='bold-text'>Name :</span> {name}</h3>
-            <p><span className='bold-text'>House :</span> {house}</p>
-            <p><span className='bold-text'>Gender : </span>{gender}</p>
-            <p><span className='bold-text'>DOB : </span>{dob!== '' ? dob : 'unknown'} </p>
+            <p className='card__text'><span className='bold-text'>House :</span> {house}</p>
+            <p className='card__text'><span className='bold-text'>Gender : </span>{gender}</p>
+            <p className='card__text'><span className='bold-text'>DOB : </span>{dob!== '' ? dob : 'unknown'} </p>
         </article>
     )
 }

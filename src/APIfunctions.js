@@ -16,3 +16,8 @@ export default async function getStudentsByName(name) {
 
     return listOfStudents.filter((student) => student.name.toLowerCase().includes(name.toLowerCase()))
 }
+
+
+export function getStudentsFilteredByHouse (listOfStudents, houseFilter){
+    return listOfStudents.filter((student) => student.house === houseFilter)
+}

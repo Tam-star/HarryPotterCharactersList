@@ -1,17 +1,13 @@
 import React from 'react';
 import Card from './card'
 import getStudentsByName from '../APIfunctions';
-
-let dataStudents = []
-
+import { getStudentsFilteredByHouse } from '../APIfunctions';
 
 
-export default function Main({ character }) {
-    //const [data, setData] = React.useState([])
+export default function Main({ character, house }) {
     const [results, setResults] = React.useState([])
 
     React.useEffect(() => {
-        console.log('changed')
         getStudentsByName(character).then((response) => {
             setResults(response)
         })
@@ -20,17 +16,14 @@ export default function Main({ character }) {
 
     return (
         <main>
-            <h2>Results for : {character}</h2>
+            <h2>Results for {character} {house!== '' ?  ` in ${house}` : ''}</h2>
             <article className='cards-block'>
-                {results.map(studentData => (
-                    <Card key={studentData.name} name={studentData.name} house={studentData.house} gender={studentData.gender} dob={studentData.dateOfBirth} imgSrc={studentData.image}/> 
-                    // <EmojiResultRow
-                    //     key={emojiData.title}
-                    //     symbol={emojiData.symbol}
-                    //     title={emojiData.title}
-                    // />
+                {house !== '' ? getStudentsFilteredByHouse(results, house).map(studentData => (
+                    <Card key={studentData.name} name={studentData.name} house={studentData.house} gender={studentData.gender} dob={studentData.dateOfBirth} imgSrc={studentData.image} />
+                )) :  results.map(studentData => (
+                    <Card key={studentData.name} name={studentData.name} house={studentData.house} gender={studentData.gender} dob={studentData.dateOfBirth} imgSrc={studentData.image} />
                 ))}
-                {/* <Card name='Harry Potter' house='Gryffindor' gender='male' dob='31-07-1980' /> */}
+               
             </article>
         </main>
     )

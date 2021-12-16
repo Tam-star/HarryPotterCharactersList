@@ -7,7 +7,7 @@ header{
 
 h1{
     @include title-style(100px);
-    text-shadow: #FC0 5px 5px 10px;
+    text-shadow: $light-color 5px 5px 10px;
 }
 
 
@@ -23,6 +23,7 @@ h1{
     &__input{
         width:30%;
         padding: 10px;
+        border: 4px inset $light-color;
     }
 }
 
@@ -37,8 +38,6 @@ h1{
         font-size: 20px;
         font-weight: bold;
         margin-top : 20px;
-        // background: linear-gradient(to right,
-        // red 25%,  green 25% 50%, yellow 50% 75%, blue 75%);
         box-shadow: 5px 5px 5px black;
         background-color: honeydew;
         cursor: pointer;
@@ -62,8 +61,16 @@ h1{
             }
             &:hover{
                 background-color: lighten($color: #bb2a2a, $amount: 20%);
-                color:lightpink;
+                color:$light-color;
             }
         }
     }
+}
+
+.clear-button{
+    padding : 10px;
+    margin-top : 20px;
+    font-style: italic;
+    background-color: honeydew;
+    border-radius: 10px;
 }
