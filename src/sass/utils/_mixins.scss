@@ -4,3 +4,9 @@
     text-align: center; 
     margin: 10px;   
 }
+
+@mixin phone-only{
+    @media(max-width: 780px){
+        @content
+    }
+}

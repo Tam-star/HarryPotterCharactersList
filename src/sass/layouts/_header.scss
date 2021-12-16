@@ -15,6 +15,10 @@ h1{
     display: flex;
     justify-content: center;
     width :100%;
+    @include phone-only{
+        flex-direction: column;
+        align-items: center;
+    }
     &__label{
         font-weight: 700;
         font-size: 25px;
@@ -22,8 +26,12 @@ h1{
     }
     &__input{
         width:30%;
+        min-width : 200px;
         padding: 10px;
         border: 4px inset $light-color;
+        @include phone-only{
+            margin-top:15px;
+        }
     }
 }
 
@@ -35,6 +43,7 @@ h1{
     &__button{
         padding:15px;
         width : $filter-width;
+        min-width : 200px;
         font-size: 20px;
         font-weight: bold;
         margin-top : 20px;
@@ -46,6 +55,7 @@ h1{
         display: flex;
         flex-direction: column;
         width : $filter-width;
+        min-width : 200px;
         list-style-type: none;
         margin : 0;
         padding: 0;
@@ -73,4 +83,5 @@ h1{
     font-style: italic;
     background-color: honeydew;
     border-radius: 10px;
+    min-width : 150px;
 }

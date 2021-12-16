@@ -1,0 +1,7 @@
+body{
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell';
+    background: rgb(254,235,185);
+    background: radial-gradient(circle, $primary-color 0%, $secondary-color 70%, $tertiary-color 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
