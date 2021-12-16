@@ -1,22 +1,69 @@
 header{
     padding : 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1{
-    @include title-style(70px);
+    @include title-style(100px);
+    text-shadow: #FC0 5px 5px 10px;
 }
 
 
 .search{
     display: flex;
     justify-content: center;
+    width :100%;
     &__label{
         font-weight: 700;
         font-size: 25px;
         margin-right: 20px;
     }
     &__input{
-        width:40%;
+        width:30%;
         padding: 10px;
+    }
+}
+
+.filters{
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    width : 100%;
+    &__button{
+        padding:15px;
+        width : $filter-width;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top : 20px;
+        // background: linear-gradient(to right,
+        // red 25%,  green 25% 50%, yellow 50% 75%, blue 75%);
+        box-shadow: 5px 5px 5px black;
+        background-color: honeydew;
+        cursor: pointer;
+    }
+    &__menu{
+        display: flex;
+        flex-direction: column;
+        width : $filter-width;
+        list-style-type: none;
+        margin : 0;
+        padding: 0;
+        &__house{
+            font-family: 'HarryPotter';
+            font-size : 30px;
+            text-align: center;
+            padding : 10px;
+            font-weight: bold;
+            cursor: pointer;
+            &--light{
+                color: white;
+            }
+            &:hover{
+                background-color: lighten($color: #bb2a2a, $amount: 20%);
+                color:lightpink;
+            }
+        }
     }
 }
