@@ -9,9 +9,8 @@ function App() {
 
   const changeCharacter = (event) => {
     setCharacter(event.target.value)
-    //console.log(character)
-  }
 
+  }
 
   return (
     <div className="App">

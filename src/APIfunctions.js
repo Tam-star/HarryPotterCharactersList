@@ -11,5 +11,8 @@ export function getStudents() {
 
 export default async function getStudentsByName(name) {
     const listOfStudents = await getStudents()
+    //Because there is twice the same name (Theodore Nott)
+    listOfStudents.splice(listOfStudents.length-2,1)
+
     return listOfStudents.filter((student) => student.name.toLowerCase().includes(name.toLowerCase()))
 }
