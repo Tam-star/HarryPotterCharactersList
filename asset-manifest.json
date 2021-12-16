@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/HarryPotterCharactersList/static/css/main.747077dc.css",
+    "main.js": "/HarryPotterCharactersList/static/js/main.c0277ff9.js",
+    "static/media/harryp.ttf": "/HarryPotterCharactersList/static/media/harryp.a65869c0c1a4b3d4fcfc.ttf",
+    "index.html": "/HarryPotterCharactersList/index.html",
+    "main.747077dc.css.map": "/HarryPotterCharactersList/static/css/main.747077dc.css.map",
+    "main.c0277ff9.js.map": "/HarryPotterCharactersList/static/js/main.c0277ff9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.747077dc.css",
+    "static/js/main.c0277ff9.js"
+  ]
+}
